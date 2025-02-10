@@ -1,13 +1,13 @@
-"use client";
+"use client"; // ✅ Ensure this is a client component
 
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 interface ProtectedRouteProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export default function ProtectedRoute({ children }: ProtectedRouteProps ) {
+export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -18,12 +18,6 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps ) {
       }
     }
   }, [router]);
-
-  const isLoggedIn = typeof window !== "undefined" && localStorage.getItem("isLoggedIn");
-
-  if (!isLoggedIn) {
-    return null; // Don't render children if not logged in
-  }
 
   return <>{children}</>;
 }

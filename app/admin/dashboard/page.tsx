@@ -4,7 +4,7 @@
 import { client } from "@/sanity/lib/client";
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import ProtectedRoute from "../../components/protected/ProtectedRoute";
+import ProtectedRoute from "../../components/ProtectedRoute";
 
 interface Order {
   _id: string;
