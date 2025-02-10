@@ -7,7 +7,7 @@ interface ProtectedRouteProps {
   children: React.ReactNode;
 }
 
-export default function ProtectedRoute({ children }:  {children : any}) {
+export default function ProtectedRoute({ children }: ProtectedRouteProps ) {
   const router = useRouter();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function ProtectedRoute({ children }:  {children : any}) {
         router.replace("/admin");
       }
     }
-  }, []);
+  }, [router]);
 
   const isLoggedIn = typeof window !== "undefined" && localStorage.getItem("isLoggedIn");
 

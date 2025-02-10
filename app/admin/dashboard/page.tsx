@@ -24,7 +24,7 @@ interface Order {
 
 export default function AdminDashboard() {
   const [orders, setOrders] = useState<Order[]>([]);
-  const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
+  const [, setSelectedOrderId] = useState<string | null>(null);
   const [filter, setFilter] = useState("All");
   const [isMounted, setIsMounted] = useState(false); // Fix hydration error
 
