@@ -21,9 +21,9 @@ export default function ProtectedRoute({ children }:  {children : any}) {
 
   const isLoggedIn = typeof window !== "undefined" && localStorage.getItem("isLoggedIn");
 
-//   if (!isLoggedIn) {
-//     return null; // Don't render children if not logged in
-//   }
+  if (!isLoggedIn) {
+    return null; // Don't render children if not logged in
+  }
 
   return <>{children}</>;
 }
