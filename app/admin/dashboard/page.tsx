@@ -74,6 +74,7 @@ export default function AdminDashboard() {
       setOrders((prevOrders) => prevOrders.filter((order) => order._id !== orderId));
       Swal.fire("Deleted!", "Order has been removed.", "success");
     } catch (error) {
+      console.error("Error:", error); 
       Swal.fire("Error", "Failed to delete order", "error");
     }
   };
@@ -89,6 +90,7 @@ export default function AdminDashboard() {
 
       Swal.fire("Status Updated", `Order is now ${newStatus}`, "success");
     } catch (error) {
+      console.error("Error:", error); 
       Swal.fire("Error", "Failed to update status", "error");
     }
   };
