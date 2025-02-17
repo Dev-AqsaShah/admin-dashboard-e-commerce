@@ -14,7 +14,7 @@ export default function AdminLogin() {
     e.preventDefault();
 
     // ✅ Admin Credentials (Replace with secure authentication later)
-    const adminEmail = "aqsashah000000@gmail.com";
+    const adminEmail = "example@gmail.com";
     const adminPassword = "admin123"; // ⚠️ Change this to a secure backend authentication
 
     if (email === adminEmail && password === adminPassword) {
